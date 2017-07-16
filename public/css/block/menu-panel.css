@@ -18,7 +18,6 @@
 .menu-panel__item {
   padding-left: 20px;
   padding-top: 10px;
-  padding-bottom: 10px;
 }
 .menu-panel__item:hover {
   background-color: #474747;
@@ -26,9 +25,13 @@
 .menu-panel__link {
   text-decoration: none;
   color: #FFFFFF;
+  height: 35px;
+  display: block;
 }
-
 .menu-panel__link:hover, .menu-panel__link:visited, .menu-panel__link:active {
   color: #FFFFFF;
   text-decoration: none;
+}
+.menu-panel__link > i {
+  padding-right: 10px;
 }

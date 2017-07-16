@@ -5,6 +5,10 @@ router.get('/admin', function(req, res) {
 	res.render('admin/dashboard');
 });
 
+router.get('/admin/order', function(req, res) {
+	res.render('admin/order');
+});
+
 router.get('/admin/customer', function(req, res) {
 	res.render('admin/customer');
 });
