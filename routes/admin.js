@@ -1,6 +1,33 @@
-// imports
 var router = require('express').Router();
 var Category = require('../models/category');
+
+router.get('/admin', function(req, res) {
+	res.render('admin/dashboard');
+});
+
+router.get('/admin/customer', function(req, res) {
+	res.render('admin/customer');
+});
+
+router.get('/admin/category', function(req, res) {
+	res.render('admin/category');
+});
+
+router.get('/admin/product', function(req, res) {
+	res.render('admin/product');
+});
+
+router.get('/admin/pay', function(req, res) {
+	res.render('admin/pay');
+});
+
+router.get('/admin/transport', function(req, res) {
+	res.render('admin/transport');
+});
+
+router.get('/admin/config', function(req, res) {
+	res.render('admin/config');
+});
 
 /**
  * handles GET HTTP requests for adding a category

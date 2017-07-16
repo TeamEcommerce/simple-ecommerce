@@ -1,0 +1,7 @@
+html, body {
+  height: 100vh;
+}
+
+.container-fluid, .row, [class*="col-"] {
+  height: 100vh;
+}

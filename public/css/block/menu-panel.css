@@ -1,0 +1,34 @@
+.menu-panel {
+  background-color: #636363;
+  padding-top: 40px;
+  height: 100%;
+  width: 100%;
+}
+.menu-panel__items {
+  padding-left: 0px;
+  list-style-type: none;
+}
+.menu-panel__divider {
+  border-bottom: 1px solid #848484;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  height: 2px;
+  background-color: #555555;
+}
+.menu-panel__item {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.menu-panel__item:hover {
+  background-color: #474747;
+}
+.menu-panel__link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.menu-panel__link:hover, .menu-panel__link:visited, .menu-panel__link:active {
+  color: #FFFFFF;
+  text-decoration: none;
+}

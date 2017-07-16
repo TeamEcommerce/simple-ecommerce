@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Ecommerce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 nopadding">
+          <% include ./../partials/menu %>
+        </div>
+        <div class="col-md-10">
+            <%- body -%>
+        </div>
+      </div>
+    </div>
+    <% include ./../partials/scripts %>
+  </body>
+</html>
