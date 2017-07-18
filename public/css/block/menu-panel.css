@@ -1,8 +1,26 @@
 .menu-panel {
   background-color: #636363;
-  padding-top: 40px;
   height: 100%;
   width: 100%;
+}
+.menu-panel__user {
+  height: 80px;
+  background-color: #474747;
+  padding-top: 13px;
+  padding-left: 17px;
+}
+.menu-panel__user > img {
+  width: 25%;
+}
+.menu-panel__user > span {
+  padding-left: 5px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.menu-panel__space {
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 .menu-panel__items {
   padding-left: 0px;

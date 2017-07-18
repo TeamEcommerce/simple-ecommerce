@@ -19,10 +19,13 @@ var Category = require('./models/category');
 
 // get routes
 var mainRoutes = require('./routes/main');
-var userRoutes = require('./routes/user');
-var errorRoutes = require('./routes/error');
+//var userRoutes = require('./routes/user');
+//var errorRoutes = require('./routes/error');
 var adminRoutes = require('./routes/admin');
-var apiRoutes = require('./api/api');
+//var apiRoutes = require('./api/api');
+
+// CRUD
+var adminCategories = require('./routes/admin/category');
 
 // initialize express
 var app = express();
@@ -80,16 +83,18 @@ app.use(cartLength);
 
 // make use of the routes
 app.use(mainRoutes);
-app.use(userRoutes);
+//app.use(userRoutes);
 app.use(adminRoutes);
-app.use('/api', apiRoutes);
-app.use(errorRoutes);
+//app.use('/api', apiRoutes);
+//app.use(errorRoutes);
 
-app.get('/*', function(req, res, next){
+app.use(adminCategories);
+
+/*app.get('/*', function(req, res, next){
 	if (typeof req.cookies['connect.sid'] !== 'undefined') {
 		console.log(req.cookies['connect.sid']);
 	}
-});
+});*/
 
 // configure the server's listen port and give user feedback
 app.listen(secret.port, function(err){

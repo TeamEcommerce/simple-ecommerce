@@ -1,10 +1,5 @@
-/**
- * @author: Morebodi Modise
- * @contacts: http://github.com/mrmodise, http://mrmodise.com
- */
 var mongoose = require('mongoose')
-	require('mongoose-long')(mongoose);
-//var elasticsearch = require('elasticsearch');
+require('mongoose-long')(mongoose);
 
 var mongoosastic = require('mongoosastic');
 var Schema = mongoose.Schema;

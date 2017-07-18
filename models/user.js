@@ -1,8 +1,3 @@
-/**
- * @author: Morebodi Modise
- * @contacts: http://github.com/mrmodise, http://mrmodise.com
- */
-// require the needed modules
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 var crypto = require('crypto');
@@ -26,14 +21,14 @@ var UserSchema = new Schema({
 	},
 
 	address: String,
-	
+
 	history: [{
 		paid: {type: Number, default: 0},
 		item: {type: Schema.Types.ObjectId, ref: 'Product'}
 	}]
 });
 
-/* Hash the password before saving it to the database*/ 
+/* Hash the password before saving it to the database*/
 UserSchema.pre('save', function(next){
 
 	/* this refers to the user passed as argument to the save method in /routes/user*/
@@ -48,21 +43,21 @@ UserSchema.pre('save', function(next){
 
 		/* hash the password using the generated salt */
 		bcrypt.hash(user.password, salt, function(err, hash){
-			
+
 			/* if an error has occured we stop hashing */
 			if (err) return next(err);
 
 			/* override the cleartext (user entered) passsword with the hashed one */
 			user.password = hash;
 			/*return a callback */
-			next();	
+			next();
 		});
 	});
 });
 
 /*compare database password with user user entered password */
 UserSchema.methods.comparePassword = function(userPassword){
-	/* this.password refers to the database password, 
+	/* this.password refers to the database password,
 	userPassword to the password the user entered on the login form*/
 	return bcrypt.compareSync(userPassword, this.password);
 }

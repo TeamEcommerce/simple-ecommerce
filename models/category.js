@@ -1,7 +1,3 @@
-/**
- * @author: Morebodi Modise
- * @contacts: http://github.com/mrmodise, http://mrmodise.com
- */
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
