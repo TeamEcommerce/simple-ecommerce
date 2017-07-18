@@ -1,9 +1,5 @@
-/**
- * @author: Morebodi Modise
- * @contacts: http://github.com/mrmodise, http://mrmodise.com
- */
 module.exports = {
-	database: 'mongodb://localhost:27017/test',
+	database: process.env.MONGODB, //'mongodb://localhost:27017/test',
 	port: process.env.PORT || 3000,
 	secretKey: 'LKSJ&%$#XFE',
 	facebook:{

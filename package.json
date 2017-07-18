@@ -31,5 +31,8 @@
     "passport-facebook": "^2.1.1",
     "passport-local": "^1.0.0",
     "stripe": "^4.23.1"
+  },
+  "engines": {
+      "node": "6.11.0"
   }
 }
